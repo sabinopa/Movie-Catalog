@@ -1,0 +1,3 @@
+class GendersController < ApplicationController
+    
+end
