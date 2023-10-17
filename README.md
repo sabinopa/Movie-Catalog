@@ -1,24 +1,32 @@
-# README
+# Movie Catalog in Ruby on Rails
+Este é um projeto de catálogo de filmes desenvolvido em Ruby on Rails, com foco no aprendizado dos conceitos fundamentais do MVC (Model-View-Controller) e na implementação de rotas. O objetivo principal deste projeto é permitir a organização e exibição de informações sobre filmes, gêneros e diretores.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Funcionalidades
+O projeto oferece as seguintes funcionalidades:
 
-Things you may want to cover:
+###### Cadastro e Edição de Gêneros de Filmes:
+Você pode criar novos gêneros de filmes e editá-los conforme necessário.
 
-* Ruby version
+###### Cadastro e Edição de Diretores:
+Possibilidade de adicionar novos diretores e fazer edições quando necessário.
 
-* System dependencies
+###### Cadastro e Edição de Filmes:
+Adicione informações detalhadas sobre os filmes, incluindo título, ano de lançamento e outros atributos relevantes.
 
-* Configuration
+###### Listagem de Todos os Gêneros:
+Visualize uma lista de todos os gêneros de filmes cadastrados.
 
-* Database creation
+###### Detalhes dos Gêneros:
+Ao acessar a tela de detalhes de um gênero específico, você pode ver uma lista de todos os filmes associados a esse gênero.
 
-* Database initialization
+###### Listagem de Todos os Diretores:
+Tenha uma visão geral de todos os diretores cadastrados.
 
-* How to run the test suite
+###### Detalhes dos Diretores:
+Ao acessar a tela de detalhes de um diretor específico, você pode ver todos os filmes cadastrados que foram dirigidos por essa pessoa.
 
-* Services (job queues, cache servers, search engines, etc.)
+###### Listagem de Todos os Filmes:
+Visualize uma lista de todos os filmes disponíveis no catálogo.
 
-* Deployment instructions
-
-* ...
+###### Detalhes dos Filmes:
+Ao clicar em um filme na lista, você terá acesso a informações detalhadas sobre esse filme, incluindo ano de lançamento, diretor e sinopse.
