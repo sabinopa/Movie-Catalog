@@ -1,3 +1,4 @@
 class Gender < ApplicationRecord
-    has_many :movies
+    has_many :director
+    has_many :movie
 end

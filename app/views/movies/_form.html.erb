@@ -1,0 +1,29 @@
+<%= form_with model: movie do |f| %>
+
+<%= f.label 'Título:' %>
+<%= f.text_field :title %>
+
+<%= f.label 'Ano de lançamento:' %>
+<%= f.number_field :year %>
+
+<%= f.label 'Sinopse:' %>
+<%= f.text_area :summary %>
+
+<%= f.label 'País:' %>
+<%= f.text_field :country %>
+
+<%= f.label 'Tempo(min):' %>
+<%= f.number_field :time %>
+
+<%= f.label 'Diretor(a):' %>
+<%= f.collection_select :director_id, Director.all, :id, :name %>
+
+<%= f.label 'Gênero:' %>
+<%= f.collection_select :gender_id, Gender.all, :id, :name %>
+
+<%= f.label :image, 'URL da Capa: ' %>
+<%= f.text_field :image %>
+
+<%= f.submit 'Salvar' %>
+
+<% end %>

@@ -1,0 +1,18 @@
+<%= form_with model: Director.new do |f| %>
+
+    <%= f.label :name, 'Nome' %>
+    <%= f.text_field :name %>
+
+    <%= f.label :nationality, 'Nacionalidade' %>
+    <%= f.text_field :nationality %>
+
+    <%= f.label :birth_date, 'Data de Nascimento' %>
+    <%= f.text_field :birth_date %>
+ 
+    <%= f.label :favourite_gender, 'Gênero favorito' %>
+    <%= f.text_field :favourite_gender %>
+
+    <%= f.submit 'Salvar' %>
+
+
+<% end %>
