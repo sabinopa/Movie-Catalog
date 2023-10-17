@@ -41,7 +41,7 @@ class MoviesController < ApplicationController
                         genre_id: params[:movie][:genre_id])
             return redirect_to movie_path(@movie.id, updated: true)
         end
-    render :edit
+        render :edit
     end
 
     def publish

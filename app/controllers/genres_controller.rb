@@ -28,6 +28,6 @@ class GenresController < ApplicationController
         if @genre.update(name: params[:genre][:name])
             return redirect_to genre_path(@genre.id, created: true)
         end 
-    render :new   
+        render :new   
     end
 end
