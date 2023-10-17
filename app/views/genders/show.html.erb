@@ -2,12 +2,11 @@
 <h2><%= @gender.name %> </h2>
 
 
-<%= link_to 'Editar', edit_gender_path%>
+<%= link_to 'Editar', edit_gender_path%></br>
 <%= link_to 'Voltar', gender_path %>
 
 <div><strong>Nome:</strong> <%= @gender.name %> </div>
 
-<%= button_to 'Publicar' %>
 
 <h3>Filmes cadastrados de <%= @gender.name %>: </h4>
 <ul>

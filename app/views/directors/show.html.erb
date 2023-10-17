@@ -1,7 +1,7 @@
 <h1>Diretor:</h1>
 <h2><%= @director.name %></h2>
 
-<%= link_to 'Editar', edit_director_path %>
+<%= link_to 'Editar', edit_director_path %></br>
 <%= link_to 'Voltar', directors_path %>
 
 <div><strong>Nome:</strong> <%= @director.name %></div>
@@ -12,7 +12,6 @@
         
 <div><strong>Gênero favorito:</strong><%= @director.favourite_gender %></div>
 
-<%= button_to 'Publicar' %>
 
 <h3>Filmes cadastrados dirigidos por <%= @director.name %>: </h3>
 <ul>

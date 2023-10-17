@@ -13,17 +13,17 @@ class GendersController < ApplicationController
 
     def show
         @gender = Gender.find(params[:id])
-        @gender = @gender.movie
+        @movies = @gender.movie
         flash[:notice] = 'Gênero salvo com sucesso!' if params[:created] == true
         flash[:notice] = 'Gênero editado com sucesso!' if params[:updated] == true
     end
 
     def edit
-        @gender = gender.find(params[:id])
+        @gender = Gender.find(params[:id])
     end
             
     def update
-        @gender = gender.find(params[:id])
+        @gender = Gender.find(params[:id])
                     
         if @gender.update(name: params[:gender][:name])
             return redirect_to gender_path(@gender.id, created: true)

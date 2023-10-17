@@ -16,17 +16,17 @@ class DirectorsController < ApplicationController
     
     def show
         @director = Director.find(params[:id])
-        @movies = @director.movies
+        @movies = @director.movie
         flash[:notice] = 'Diretor cadastrado com sucesso!' if params[:created] == true
         flash[:notice] = 'Diretor editado com sucesso!' if params[:updated] == true
     end
 
     def edit
-        @director = director.find(params[:id])
+        @director = Director.find(params[:id])
     end
     
     def update
-        @director = director.find(params[:id])
+        @director = Director.find(params[:id])
             
         if @director.update(name: params[:director][:name],
                             nationality: params[:director][:nationality],

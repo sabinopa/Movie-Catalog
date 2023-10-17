@@ -19,7 +19,7 @@ class MoviesController < ApplicationController
                             gender_id: params[:movie][:gender_id])
 
         if @movie.save
-           redirect_to movie_path(@movie.id, created: true)
+           return redirect_to movie_path(@movie.id, created: true)
         end
     
         render :new
@@ -39,7 +39,7 @@ class MoviesController < ApplicationController
                         time: params[:movie][:time],
                         director_id: params[:movie][:director_id],
                         gender_id: params[:movie][:gender_id])
-            redirect_to movie_path((@movie.id, updated: true))
+            return redirect_to movie_path(@movie.id, updated: true)
         end
     render :edit
     end

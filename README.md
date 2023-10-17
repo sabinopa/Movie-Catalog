@@ -29,4 +29,4 @@ Ao acessar a tela de detalhes de um diretor específico, você pode ver todos os
 Visualize uma lista de todos os filmes disponíveis no catálogo.
 
 ###### Detalhes dos Filmes:
-Ao clicar em um filme na lista, você terá acesso a informações detalhadas sobre esse filme, incluindo ano de lançamento, diretor e sinopse.
+Ao clicar em um filme na lista, você terá acesso a informações detalhadas sobre esse filme, incluindo ano de lançamento, diretor e sinopse.      
