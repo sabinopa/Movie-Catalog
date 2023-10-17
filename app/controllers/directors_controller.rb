@@ -7,7 +7,7 @@ class DirectorsController < ApplicationController
         @director = Director.new(name: params[:director][:name],
                                 nationality: params[:director][:nationality],
                                 birth_date: params[:director][:date_birth],
-                                favourite_gender: params[:director][:favourite_gender])
+                                favourite_genre: params[:director][:favourite_genre])
 
         if @director.save
             return redirect_to director_path(@director.id, create: true)
@@ -31,7 +31,7 @@ class DirectorsController < ApplicationController
         if @director.update(name: params[:director][:name],
                             nationality: params[:director][:nationality],
                             birth_date: params[:director][:date_birth],
-                            favourite_gender: params[:director][:favourite_gender])
+                            favourite_genre: params[:director][:favourite_genre])
             redirect_to director_path(@director.id, update: true)
         end 
         render :new

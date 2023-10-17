@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :movies, only: [:show, :new, :create, :edit, :update] do
       patch :publish, on: :member
   end
-  resources :genders, only:  [:show, :new, :create, :edit, :update]
+  resources :genres, only:  [:show, :new, :create, :edit, :update]
   resources :directors, only:  [:show, :new, :create, :edit, :update]
 end

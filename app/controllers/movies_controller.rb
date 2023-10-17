@@ -16,7 +16,7 @@ class MoviesController < ApplicationController
                             country: params[:movie][:country],
                             time: params[:movie][:time],
                             director_id: params[:movie][:director_id],
-                            gender_id: params[:movie][:gender_id])
+                            genre_id: params[:movie][:genre_id])
 
         if @movie.save
            return redirect_to movie_path(@movie.id, created: true)
@@ -38,7 +38,7 @@ class MoviesController < ApplicationController
                         country: params[:movie][:country],
                         time: params[:movie][:time],
                         director_id: params[:movie][:director_id],
-                        gender_id: params[:movie][:gender_id])
+                        genre_id: params[:movie][:genre_id])
             return redirect_to movie_path(@movie.id, updated: true)
         end
     render :edit

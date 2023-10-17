@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
     def index
         @movies = Movie.all
-        @genders = Gender.all
+        @genres = Genre.all
         @directors = Director.all
     end  
 end

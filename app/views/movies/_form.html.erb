@@ -19,7 +19,7 @@
 <%= f.collection_select :director_id, Director.all, :id, :name %>
 
 <%= f.label 'Gênero:' %>
-<%= f.collection_select :gender_id, Gender.all, :id, :name %>
+<%= f.collection_select :genre_id, Genre.all, :id, :name %>
 
 <%= f.label :image, 'URL da Capa: ' %>
 <%= f.text_field :image %>
