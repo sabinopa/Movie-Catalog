@@ -1,17 +1,7 @@
 <h1> Catálogo de Filmes </h1>
 
-<h2>Filmes</h2>
-<% @movies.each do | movie | %>
-        <%= link_to movie.title, movie %>
-<br />
-<% end %>
-<h3>Gêneros</h3>
-<% @genres.each do | genre | %>
-        <%= link_to genre.name, genre %>
-<br />
-<% end %>
-<h4>Diretores</h4>
-<% @directors.each do | director | %>
-        <%= link_to director.name, director %>
-<br />
-<% end %>
+<%= link_to 'Filmes', movies_path %>
+</br>
+<%= link_to 'Gêneros', genres_path %>
+</br>
+ <%= link_to 'Diretores', directors_path %>

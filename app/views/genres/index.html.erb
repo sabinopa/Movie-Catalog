@@ -1,0 +1,5 @@
+<h1>Lista de gêneros:</h1>
+<% @genres.each do | genre | %>
+        <%= link_to genre.name, genre %>
+<br />
+<% end %>
