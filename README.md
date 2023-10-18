@@ -11,6 +11,11 @@ Este é um projeto de catálogo de filmes desenvolvido em Ruby on Rails, com foc
 - [x] Visualizar lista de todos os filmes cadastrados;
 - [x] Ao clicar em um filme na lista, visualizar informações detalhadas sobre esse filme, como título, ano de lançamento, tempo de duração, sinopse, além de poster.
 
+#### Extras
+- [x]  Separar os filmes entre "já lançados" e "a ser lançado" e permitir que os usuários vejam esta informação tanto na listagem quanto na tela de detalhes de um filme.
+- [x]  Permitir que o cadastro de um filme seja marcado como "rascunho" e só exibir o filme caso ele não esteja com esta marcação.
+- [x]  Permitir o cadastro de uma imagem do pôster de cada filme e exibir esta imagem na listagem e na tela de detalhes de um filme.
+
 ### Como executar o projeto 
 
 Para executar esse projeto, você deve instalar a linguagem Ruby v3.2.2 e o framework Rails v7.0.8 em seu computador.
