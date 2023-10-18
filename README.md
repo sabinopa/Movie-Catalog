@@ -1,32 +1,47 @@
 # Movie Catalog in Ruby on Rails
-Este é um projeto de catálogo de filmes desenvolvido em Ruby on Rails, com foco no aprendizado dos conceitos fundamentais do MVC (Model-View-Controller) e na implementação de rotas. O objetivo principal deste projeto é permitir a organização e exibição de informações sobre filmes, gêneros e diretores.
+Este é um projeto de catálogo de filmes desenvolvido em Ruby on Rails, com foco no aprendizado dos conceitos fundamentais do MVC (Model-View-Controller) e na implementação de rotas. O objetivo principal deste projeto é uma aplicação web que permite cadastrar e exibir informações sobre filmes, gêneros de filmes e diretores.
 
 ### Funcionalidades
-O projeto oferece as seguintes funcionalidades:
+- [x] Criar novos gêneros de filmes e editá-los conforme necessário;
+- [x] Adicionar novos diretores e fazer edições quando necessário;
+- [x] Adicionar informações detalhadas sobre os filmes, incluindo título, ano de lançamento, tempo de duração, sinopse, além de poster;
+- [x] Visualizar lista de todos os gêneros de filmes cadastrados;
+- [x] Ao acessar a tela de detalhes de um gênero específico, você pode ver uma lista de todos os filmes associados a esse gênero;
+- [x] Visualizar lista de todos os diretores cadastrados;
+- [x] Visualizar lista de todos os filmes cadastrados;
+- [x] Ao clicar em um filme na lista, visualizar informações detalhadas sobre esse filme, como título, ano de lançamento, tempo de duração, sinopse, além de poster.
 
-###### Cadastro e Edição de Gêneros de Filmes:
-Você pode criar novos gêneros de filmes e editá-los conforme necessário.
+### Como executar o projeto 
 
-###### Cadastro e Edição de Diretores:
-Possibilidade de adicionar novos diretores e fazer edições quando necessário.
+Para executar esse projeto, você deve instalar a linguagem Ruby v3.2.2 e o framework Rails v7.0.8 em seu computador.
 
-###### Cadastro e Edição de Filmes:
-Adicione informações detalhadas sobre os filmes, incluindo título, ano de lançamento e outros atributos relevantes.
+Em seguida, siga os passos abaixo: 
 
-###### Listagem de Todos os Gêneros:
-Visualize uma lista de todos os gêneros de filmes cadastrados.
+- Clone este repostório
+```
+git clone https://github.com/sabinopa/Movie-Catalog.git
+```
 
-###### Detalhes dos Gêneros:
-Ao acessar a tela de detalhes de um gênero específico, você pode ver uma lista de todos os filmes associados a esse gênero.
+- Abra o diretório pelo terminal 
+```
+cd movie-catalog
+```
 
-###### Listagem de Todos os Diretores:
-Tenha uma visão geral de todos os diretores cadastrados.
+- Instale o Bundle pelo terminal 
+```
+bundle install
+```
 
-###### Detalhes dos Diretores:
-Ao acessar a tela de detalhes de um diretor específico, você pode ver todos os filmes cadastrados que foram dirigidos por essa pessoa.
+- Crie e popule o banco de dados 
+```
+rails db:migrate
+rails db:seed
+```
 
-###### Listagem de Todos os Filmes:
-Visualize uma lista de todos os filmes disponíveis no catálogo.
+- Execute a aplicação 
+```
+rails server
+```
 
-###### Detalhes dos Filmes:
-Ao clicar em um filme na lista, você terá acesso a informações detalhadas sobre esse filme, incluindo ano de lançamento, diretor e sinopse.      
+- Acesse a aplicação no link http://localhost:3000/
+
