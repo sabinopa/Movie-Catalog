@@ -1,4 +1,8 @@
 class MoviesController < ApplicationController
+    def index
+        @movies = Movie.all
+    end
+
     def show
         @movie = Movie.find(params[:id])
         flash[:notice] = 'Filme cadastrado com sucesso!' if params[:created] == true

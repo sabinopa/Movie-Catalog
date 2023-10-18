@@ -14,15 +14,14 @@ class DirectorsController < ApplicationController
                                 favourite_genre: params[:director][:favourite_genre])
 
         if @director.save
-            return redirect_to director_path(@director.id, create: true)
+            return redirect_to director_path(@director.id)
         end
     end
     
     def show
         @director = Director.find(params[:id])
         @movies = @director.movie
-        flash[:notice] = 'Diretor cadastrado com sucesso!' if params[:created] == true
-        flash[:notice] = 'Diretor editado com sucesso!' if params[:updated] == true
+
     end
 
     def edit
@@ -36,8 +35,10 @@ class DirectorsController < ApplicationController
                             nationality: params[:director][:nationality],
                             birth_date: params[:director][:birth_date],
                             favourite_genre: params[:director][:favourite_genre])
-            return redirect_to director_path(@director.id, updated: true)
-        end 
+            
+            flash[:notice] = "#{@director.name}: Atualizado com sucesso!"
+            return redirect_to director_path(@director.id)
+        end
         render :edit
     end
 end
