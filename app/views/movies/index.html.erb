@@ -3,13 +3,13 @@
 <h2> Filmes lançados </h2>
 <ul>
     <% @movies.released.each do | released_movie | %>
-        <li><%= link_to "#{released_movie.title} - #{released_movie.year}" %></li>
+        <li><%= link_to "#{released_movie.title} - #{released_movie.year}", released_movie %></li>
     <% end %> 
 </ul>
 
 <h2> Filmes não lançados </h2>
 <ul>
     <% @movies.not_released.each do | not_released_movie | %>
-        <li><%= link_to "#{not_released_movie.title} - #{not_released_movie.year}" %></li>
+        <li><%= link_to "#{not_released_movie.title} - #{not_released_movie.year}", not_released_movie %></li>
     <% end %> 
 </ul>

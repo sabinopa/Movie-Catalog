@@ -5,7 +5,10 @@
 
 <div><strong>Nome:</strong> <%= @movie.title %></div>
         
-<div><strong>Ano de lançamento:</strong><%= @movie.year %></div>
+<div>
+    <strong>Ano de lançamento:</strong>
+    <%= @movie.year %>, <%= @movie.released? ? "Lançado" : "A ser lançado" %>
+</div>
 
 <div><strong>Resumo:</strong><%= @movie.summary %></div>
 
