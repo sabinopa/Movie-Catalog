@@ -11,8 +11,9 @@ class GenresController < ApplicationController
         @genre = Genre.new(genre_params)
     
         if @genre.save
-            return redirect_to genre_path(@genre.id), notice: "#{genre.name} criado com sucesso!" 
+            return redirect_to genre_path(@genre.id), notice: "#{@genre.name} criado com sucesso!" 
         end
+        render :new
     end
 
     def show
@@ -28,7 +29,7 @@ class GenresController < ApplicationController
         @genre = Genre.find(params[:id])
                     
         if @genre.update(genre_params)
-            return redirect_to genre_path(@genre.id), notice: "#{genre.name} atualizado com sucesso!" 
+            return redirect_to genre_path(@genre.id), notice: "#{@genre.name} atualizado com sucesso!" 
         end 
         render :new   
     end

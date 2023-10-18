@@ -19,7 +19,7 @@
     <nav>
       <ul>
         <li>
-          <%= link_to 'Home', root_path %>
+          <%= link_to 'Home', root_path if request.path != root_path %>
         </li>
         <li>
           <%= link_to 'Cadastrar novo filme', new_movie_path %>

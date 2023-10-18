@@ -3,26 +3,41 @@
 <%= f.label 'Título:' %>
 <%= f.text_field :title %>
 
+<fieldset class="radiogroup">
+    <%= f.radio_button :release, "released" %>
+    <%= f.label :release, "Filme lançado" %>
+    <%= f.radio_button :release, "not_released" %>
+    <%= f.label :release, "A ser lançado" %>
+</fieldset>
+</br>
+
 <%= f.label 'Ano de lançamento:' %>
 <%= f.number_field :year %>
-
+</br>
 <%= f.label 'Sinopse:' %>
 <%= f.text_area :summary %>
-
+</br>
 <%= f.label 'País:' %>
 <%= f.text_field :country %>
-
+</br>
 <%= f.label 'Tempo(min):' %>
 <%= f.number_field :time %>
-
+</br>
 <%= f.label 'Diretor(a):' %>
 <%= f.collection_select :director_id, Director.all, :id, :name %>
-
+</br>
 <%= f.label 'Gênero:' %>
 <%= f.collection_select :genre_id, Genre.all, :id, :name %>
-
+</br>
 <%= f.label :image, 'URL da Capa: ' %>
 <%= f.text_field :image %>
+</br>
+<fieldset class="radiogroup">
+    <%= f.radio_button :status, "draft" %>
+    <%= f.label :status, "Salvar rascunho" %>
+    <%= f.radio_button :status, "published" %>
+    <%= f.label :status, "Publicar" %>
+</fieldset>
 
 <%= f.submit 'Salvar' %>
 

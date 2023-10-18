@@ -10,7 +10,7 @@
 
 <div><strong>Data de nascimento:</strong><%= @director.birth_date %></div>
         
-<div><strong>Gênero favorito:</strong><%= @director.favourite_genre %></div>
+<div><strong>Gênero favorito:</strong><%= @director.genre.name if @director.genre %></div>
 
 
 <h3>Filmes cadastrados dirigidos por <%= @director.name %>: </h3>

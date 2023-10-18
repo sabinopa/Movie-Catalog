@@ -13,6 +13,7 @@ class DirectorsController < ApplicationController
         if @director.save
             return redirect_to director_path(@director.id), notice: "#{@director.name}: Criado com sucesso!"
         end
+        render :new
     end
     
     def show
@@ -37,6 +38,6 @@ class DirectorsController < ApplicationController
     private
     
     def director_params
-        params.require(:director).permit(:name, :nationality, :birth_date, :favourite_genre)
+        params.require(:director).permit(:name, :nationality, :birth_date, :genre_id)
     end
 end

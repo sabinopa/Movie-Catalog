@@ -19,5 +19,8 @@
 
 <div><strong>Status:</strong> <%= @movie.status %></div>
 
-<%= button_to 'Publicar', publish_movie_path, { method: 'patch' } %>
-
+<div>
+    <% if @movie.image.present? %>
+        <%= image_tag(@movie.image, alt: "Poster do {@movie.title}") %>
+    <% end %>
+</div>
