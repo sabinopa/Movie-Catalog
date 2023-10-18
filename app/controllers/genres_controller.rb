@@ -8,18 +8,16 @@ class GenresController < ApplicationController
     end
     
     def create 
-        @genre = Genre.new(name: params[:genre][:name])
+        @genre = Genre.new(genre_params)
     
         if @genre.save
-            return redirect_to genre_path(@genre.id, created: true)
+            return redirect_to genre_path(@genre.id), notice: "#{genre.name} criado com sucesso!" 
         end
     end
 
     def show
         @genre = Genre.find(params[:id])
         @movies = @genre.movie
-        flash[:notice] = 'Gênero salvo com sucesso!' if params[:created] == true
-        flash[:notice] = 'Gênero editado com sucesso!' if params[:updated] == true
     end
 
     def edit
@@ -29,9 +27,15 @@ class GenresController < ApplicationController
     def update
         @genre = Genre.find(params[:id])
                     
-        if @genre.update(name: params[:genre][:name])
-            return redirect_to genre_path(@genre.id, created: true)
+        if @genre.update(genre_params)
+            return redirect_to genre_path(@genre.id), notice: "#{genre.name} atualizado com sucesso!" 
         end 
         render :new   
+    end
+
+    private
+
+    def genre_params
+        params.require(:genre).permit(:name)
     end
 end

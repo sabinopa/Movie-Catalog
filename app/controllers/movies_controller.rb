@@ -5,8 +5,6 @@ class MoviesController < ApplicationController
 
     def show
         @movie = Movie.find(params[:id])
-        flash[:notice] = 'Filme cadastrado com sucesso!' if params[:created] == true
-        flash[:notice] = 'Filme editado com sucesso!' if params[:updated] == true
     end
     
     def new
@@ -14,16 +12,10 @@ class MoviesController < ApplicationController
     end
     
     def create 
-        @movie = Movie.new(title: params[:movie][:title],
-                            year: params[:movie][:year],
-                            summary: params[:movie][:summary],
-                            country: params[:movie][:country],
-                            time: params[:movie][:time],
-                            director_id: params[:movie][:director_id],
-                            genre_id: params[:movie][:genre_id])
+        @movie = Movie.new(movie_params)
 
         if @movie.save
-           return redirect_to movie_path(@movie.id, created: true)
+           return redirect_to movie_path(@movie.id), notice: "#{@movie.title}: Criado com sucesso!"
         end
     
         render :new
@@ -36,14 +28,8 @@ class MoviesController < ApplicationController
     def update
         @movie = Movie.find(params[:id])
             
-        if @movie.update(title: params[:movie][:title],
-                        year: params[:movie][:year],
-                        summary: params[:movie][:summary],
-                        country: params[:movie][:country],
-                        time: params[:movie][:time],
-                        director_id: params[:movie][:director_id],
-                        genre_id: params[:movie][:genre_id])
-            return redirect_to movie_path(@movie.id, updated: true)
+        if @movie.update(movie_params)
+            return redirect_to movie_path(@movie.id), notice: "#{@movie.title}: Atualizado com sucesso!"
         end
         render :edit
     end
@@ -54,4 +40,9 @@ class MoviesController < ApplicationController
         redirect_to movie_path(movie.id)
     end
 
+    private
+
+    def movie_params
+        params.require(:movie).permit(:title, :year, :summary, :country, :time, :genre_id, :director_id, :image)
+    end
 end

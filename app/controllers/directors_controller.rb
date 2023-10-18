@@ -8,14 +8,10 @@ class DirectorsController < ApplicationController
     end
 
     def create 
-        @director = Director.new(name: params[:director][:name],
-                                nationality: params[:director][:nationality],
-                                birth_date: params[:director][:birth_date],
-                                favourite_genre: params[:director][:favourite_genre])
+        @director = Director.new(director_params)
 
         if @director.save
-            flash[:notice] = "#{@director.name}: Criado com sucesso!"
-            return redirect_to director_path(@director.id)
+            return redirect_to director_path(@director.id), notice: "#{@director.name}: Criado com sucesso!"
         end
     end
     
@@ -32,14 +28,15 @@ class DirectorsController < ApplicationController
     def update
         @director = Director.find(params[:id])
             
-        if @director.update(name: params[:director][:name],
-                            nationality: params[:director][:nationality],
-                            birth_date: params[:director][:birth_date],
-                            favourite_genre: params[:director][:favourite_genre])
-            
-            flash[:notice] = "#{@director.name}: Atualizado com sucesso!"
-            return redirect_to director_path(@director.id)
+        if @director.update(director_params)
+            return redirect_to director_path(@director.id), notice: "#{@director.name}: Atualizado com sucesso!"
         end
         render :edit
+    end
+
+    private
+    
+    def director_params
+        params.require(:director).permit(:name, :nationality, :birth_date, :favourite_genre)
     end
 end
