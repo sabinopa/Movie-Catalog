@@ -1,5 +1,5 @@
 <h1>Liste de filmes:</h1>
 <% @movies.each do | movie | %>
-        <%= link_to movie.title, movie %>
+        <%= link_to "#{movie.title} - #{movie.year}", movie %>
 <br />
 <% end %>

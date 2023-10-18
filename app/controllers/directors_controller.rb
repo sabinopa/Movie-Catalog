@@ -14,6 +14,7 @@ class DirectorsController < ApplicationController
                                 favourite_genre: params[:director][:favourite_genre])
 
         if @director.save
+            flash[:notice] = "#{@director.name}: Criado com sucesso!"
             return redirect_to director_path(@director.id)
         end
     end
