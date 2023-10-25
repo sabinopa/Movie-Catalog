@@ -1,5 +1,11 @@
-<h1>Lista de gêneros:</h1>
-<% @genres.each do | genre | %>
-        <%= link_to genre.name, genre %>
-<br />
-<% end %>
+<%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+
+<div class="title-container">
+  <h1>Lista de gêneros:</h1>
+</div>
+
+<ul class="type-list">
+  <% @genres.each do | genre | %>
+    <li class="item-list"><%= link_to genre.name, genre %></li>
+  <% end %>
+</ul>

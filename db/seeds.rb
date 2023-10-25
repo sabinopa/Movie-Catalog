@@ -26,7 +26,7 @@ Movie.create([
         time: 81, 
         genre_id: animation.id, 
         director_id: john_l.id, 
-        image: "https://br.web.img3.acsta.net/medias/nmedia/18/91/05/36/20127436.jpg", 
+        image: "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/91/05/36/20127436.jpg", 
         status: 'published', 
         release: 'released'
     }, 

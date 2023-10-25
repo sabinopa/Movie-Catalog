@@ -1,29 +1,30 @@
-<h1>Filme: <%= @movie.title %></h1>
-
-
-<%= link_to 'Editar', edit_movie_path %>
-
-<div><strong>Nome:</strong> <%= @movie.title %></div>
-        
-<div>
-    <strong>Ano de lançamento:</strong>
-    <%= @movie.year %>, <%= @movie.released? ? "Lançado" : "A ser lançado" %>
+<%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+<div class="title-container">
+  <h1>Filme:</h1>
+  <h2><%= @movie.title %></h2>
 </div>
 
-<div><strong>Resumo:</strong><%= @movie.summary %></div>
-
-<div><strong>País de origem:</strong><%= @movie.country %></div>
-
-<div><strong>Time:</strong><%= @movie.time %></div>
-
-<div><strong>Diretor:</strong><%= @movie.director.name if @movie.director %></div>
-
-<div><strong>Gênero:</strong> <%= @movie.genre.name if @movie.genre %></div>
-
-<div><strong>Status:</strong> <%= @movie.status %></div>
-
-<div>
-    <% if @movie.image.present? %>
-        <%= image_tag(@movie.image, alt: "Poster do {@movie.title}") %>
-    <% end %>
+<div class="show-primary"><strong>Ano de lançamento:</strong>
+  <%= @movie.year %>, <%= @movie.released? ? "Lançado" : "A ser lançado" %>
 </div>
+
+<div class="show-primary"><strong>Resumo:</strong><%= @movie.summary %></div>
+
+<div class="show-primary"><strong>País de origem:</strong><%= @movie.country %></div>
+
+<div class="show-primary"><strong>Time:</strong><%= @movie.time %></div>
+
+<div class="show-primary"><strong>Diretor:</strong><%= @movie.director.name if @movie.director %></div>
+
+<div class="show-primary"><strong>Gênero:</strong> <%= @movie.genre.name if @movie.genre %></div>
+
+<div class="show-primary"><strong>Status:</strong> <%= @movie.status %></div>
+
+<div class="poster">
+  <% if @movie.image.present? %>
+  <%= image_tag(@movie.image, alt: "Poster do {@movie.title}", class: "img-thumbnail") %>
+  <% end %>
+</div>
+
+<%= link_to 'Editar', edit_movie_path, class: "btn btn-primary"%></br>
+<%= link_to 'Voltar', directors_path, class: "btn btn-primary" %>

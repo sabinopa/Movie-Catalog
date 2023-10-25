@@ -1,7 +1,33 @@
-<h1> Catálogo de Filmes </h1>
+<%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
 
-<%= link_to 'Filmes', movies_path %>
-</br>
-<%= link_to 'Gêneros', genres_path %>
-</br>
- <%= link_to 'Diretores', directors_path %>
+<div class="d-flex flex-row">
+<div class="card" style="width: 18rem;">
+  <img src="https://www.coollector.com/screenshots/home.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Filmes</h5>
+    <p class="card-text">Veja a lista de filmes cadastrados.</p>
+    <%= link_to 'Ver', movies_path, class: "btn btn-primary" %>
+  </div>
+</div>
+</span>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://static.taketones.com/f/images/01b4cb2d35dba27d2f93ee115f51a3a7.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Gêneros</h5>
+    <p class="card-text">Veja a lista de gêneros cadastrados.</p>
+    <%= link_to 'Ver', genres_path, class: "btn btn-primary"  %>
+  </div>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+  <img src="https://home.largo.ai/wp-content/uploads/2022/12/AdobeStock_112096736.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Diretores</h5>
+    <p class="card-text">Veja a lista de diretores cadastrados.</p>
+    <%= link_to 'Ver', directors_path, class: "btn btn-primary"  %>
+  </div>
+</div>
+</div>
+

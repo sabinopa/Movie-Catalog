@@ -1,15 +1,22 @@
-<h1>Lista de filmes:</h1>
+<%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
 
-<h2> Filmes lançados </h2>
-<ul>
+<div class="title-container">
+  <h1>Lista de filmes:</h1>
+  <h2> Filmes lançados </h2>
+</div>
+
+<ul class="type-list">
     <% @movies.released.each do | released_movie | %>
-        <li><%= link_to "#{released_movie.title} - #{released_movie.year}", released_movie %></li>
+      <li class="item-list"><%= link_to "#{released_movie.title} - #{released_movie.year}", released_movie %></li>
     <% end %> 
 </ul>
 
-<h2> Filmes não lançados </h2>
-<ul>
+<div class="title-container">
+  <h2> Filmes não lançados </h2>
+</div>
+
+<ul class="type-list">
     <% @movies.not_released.each do | not_released_movie | %>
-        <li><%= link_to "#{not_released_movie.title} - #{not_released_movie.year}", not_released_movie %></li>
+        <li class="item-list"><%= link_to "#{not_released_movie.title} - #{not_released_movie.year}", not_released_movie %></li>
     <% end %> 
 </ul>

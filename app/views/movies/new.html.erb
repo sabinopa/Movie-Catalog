@@ -1,2 +1,7 @@
-<h1>Cadastrar filme: </h1>
+<%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+
+<div class="title-container">
+  <h1>Cadastrar filme: </h1>
+</div>
+
 <%= render partial: 'form', locals: { movie: @movie } %>

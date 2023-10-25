@@ -1,5 +1,9 @@
-<h1> Edite o cadastro do diretor abaixo: </h1>
-<h3><%= @director.name %></h3>
+<%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+
+<div class="title-container">
+  <h1> Edite o cadastro do diretor abaixo: </h1>
+  <h2><%= @director.name %></h2>
+</div>
 
 <%= render partial: 'form', locals: { director: @director, genre: @genre } %>
 

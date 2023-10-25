@@ -1,3 +1,7 @@
-<h1>Cadastrar gênero:</h1>
+<%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+
+<div class="title-container">
+  <h1>Cadastrar gênero:</h1>
+</div>
 
 <%= render partial: 'form', locals: { director: @director, genre: @genre } %>

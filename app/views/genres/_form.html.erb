@@ -1,8 +1,13 @@
+<%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+
 <%= form_with model: @genre do |f| %>
 
+  <div class="col">
+    <label for="name" class="form-label">
     <%= f.label :name, 'Nome' %>
     <%= f.text_field :name %>
+    </label>
+  </div>
 
-    <%= f.submit 'Salvar' %>
-
+    <%= f.submit 'Salvar', class: "btn btn-primary" %>
 <% end %>

@@ -1,6 +1,11 @@
-<h1>Lista de diretores:</h1>
+<%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
 
+<div class="title-container">
+  <h1>Lista de diretores:</h1>
+</div>
+
+<ul class="type-list">
 <% @directors.each do | director | %>
-        <%= link_to director.name, director %>
-<br />
+  <li class="item-list"><%= link_to director.name, director %></li>
 <% end %>
+</ul>
